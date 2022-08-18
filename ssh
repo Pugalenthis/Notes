@@ -1,0 +1,23 @@
+gunzip
+tar -xf filename
+
+HostKeyAlgorithms +ssh-rsa
+PubkeyAcceptedAlgorithms +ssh-rsa
+ssh-keygen -t rsa -b 4096 -m PEM
+
+TO CHANGE DEFAULT SSH PORT;
+ 
+change the sshd port on  /etc/ssh/sshd_config add Port xxxx
+then restart sshd using sudo systemctl reload sshd
+then go to client and create config file in .ssh folder add Port xxxx.
+
+sudo /etc/init.d/ssh force-reload
+ssh-keygen -F hostname - to check known_hosts
+/etc/init.d/sshd start
+/etc/init.d/sshd stop
+/etc/init.d/sshd restart
+
+HostKeyAlgorithms +ssh-rsa
+PubkeyAcceptedAlgorithms +ssh-rsa 
+
+

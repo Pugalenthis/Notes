@@ -1,0 +1,47 @@
+RDS HAS TWO KEY FEAUTRES;
+
+1) multi-az - for disaster recovery.
+2) read replicas - for performance
+
+MULTI-AZ;
+
+If one database is failed it will automatically fallback to secondary database.
+Automatically synced to secondary database from primary database.
+
+READ-REPLICA;
+
+copy of primary database.
+It is mainly for performance of database.
+
+DATA WAREHOUSING;
+
+It is a buisness intelligence tool to analyze an data.
+
+ELASTIC CACHE;
+
+It is a memory caching service.frequently asked queries is cached into memory and delivers quickly.
+
+the two most elastic cache engines are;
+
+redis 
+memcached
+
+BOOTSTRAP SCRIPT IN EC2;
+
+It is a script which runs while launching ec2 instance.
+
+REMEMBER POINTS IN RDS;
+
+It runs in vm
+cannot log into rds instance.
+
+RDS -BACKUPS;
+
+two tyypes of backups ;
+
+1) Automated backups.
+2) Database snapshots.
+
+
+
+

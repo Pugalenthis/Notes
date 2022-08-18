@@ -1,0 +1,211 @@
+START WITH FEAUTRE NOT WITH A LAYOUT;
+
+app is actually a collection of feautres.
+Instead of starting with shell start with piece of functionality.
+
+DETAILS COME LATER;
+
+Don't hung up with making low level decisions such as icons,shadows,icons etc...
+
+HOLD THE COLOR;
+
+By designing in a gray scale you are forced to use spacing contrast and size.
+
+DONT OVER INVEST;
+
+sketches and wireframes are disposable.
+
+DON'T DESIGN TOO MUCH;
+
+you don't need to design every single feautre in an app before you move on to implementation.
+
+WORK IN CYCLES;
+
+start by designing a simple version of the next feautre you want to build.
+
+DESIGN CODE  DESIGN CODE REPEAT
+
+BE A PESSIMIST;
+
+dont imply functionality in your design that you are not ready to build.
+when you are building a new feautre expect it to be hard.
+Designing the smallest part you can ship reduce that risk considerably.
+If part of feautre nice to have design it later.
+
+YOU WILL ALWAYS HAVE SOMETHING TO FALLBACK ON.
+
+CHOOSE A PERSONALITY;
+
+banking site - secure and professional
+trendy new startup - fun and playful
+
+FONT CHOICE;
+
+for a playful look  - use rounded sans serif
+plainer look - neutral sans serif
+
+COLOR;
+
+blue is safe and similar
+
+gold might say expensive 
+
+pink is bit more fun and not so serious
+
+while thinkiing about color pychology is not super practical a lot of it is just about what looks good to you. It can be helpful about when you are tyring to understand why this color is right fit.
+
+BORDER RADIUS;
+
+no border radius - serious or formal
+small border - pretty neutral
+large border -feels playful
+
+stay consistent. mixing square corners with rounded corners is worst.
+
+LANGUAGE;
+
+the words you use an interface have a massive influence on overall personality.
+
+less personal tone - might feel more official or professional.
+using  more casual -  language makes a site feel, well friendlier.
+
+DECIDING WHAT YOU ACTUALL WANT;
+
+If you cant make decision is to take a look at other sites used by the people you want to reach.
+just try not to borrow too much for direct competitors.
+
+LIMIT YOUR CHOICES;
+
+you can easily waste time for minor design decisions.
+
+when you are designing without constraints decisions making is torture.
+
+should be this text 12 or 13px?
+
+DEFINE SYSTEM IN ADVANCE;
+
+start with the smaller set of options.
+
+choose from a set of 8-10 shades picked out ahead of time.
+
+similarly dont increase a one pixel at a time.
+
+define a restrictive type scale in advance use that to make any future decisions.
+
+DESIGNING BY PROCESS OF ELIMINTAION;
+
+when you are desigining using a constrained set of values decision making is lot easier bcoz there a lot fewer choices.
+
+FOR EX;
+
+ICON SIZE;
+
+12px 16px 24px 32px 
+
+you are limited to set of options picking the best one is piece of cake.
+
+SYSTEMATIZE EVERYTHING;
+
+the more systems is you have in place the faster you will able to work.
+
+you want system for things like;
+
+Font size 
+Font weight
+Line height
+Color
+Margin
+Padding
+Width
+Height
+Box shadow
+Border radius
+Border width
+Opacity.
+
+Look for  opportunities to introduce new systems
+
+
+HIERARCHY IS EVERYTHING;
+
+NOT ALL ELEMENTS ARE EQUAL;
+
+when everything in interface competing for attention it feels noisy and chaotic like one big wall of content it feels noisy.where its not clear what actually matters.
+
+when you delibrately de-emphasize secondary and teritary information and make an effort to highlight the elemnts that are the most important the result is immediately more pleasing, even the color scheme font choice and layout haven't changed.
+
+SIZE ISN'T EVERYTHING;
+
+Relying too much on font-size to control your heirarchy is a mistake.It often leads to primary content too large and secondary content too small.
+
+Instead of leaving all of heavy lifting to font size alone try using font weight or color to do the same job.
+
+For example, making a primary element bolder lets you use a morereasonable font size, and often does a better job at communicating its
+importance anyways.
+
+Similarly, using a softer color for supporting text instead of a tiny font size
+makes it clear that the text is secondary while sacrificing less on readability:
+
+Try and stick to two or three colors:
+
+primary content - dark color.
+secondary content - grey
+teritary content - lighter grey.
+
+Similarly, two font weights are usually enough for UI work:
+
+normal font-weight - 400 or 500 for most text.
+heavier font-weight - 600 or 700 emphasize.
+
+if you are using a lighter weight to de-emphasize some text use a lighter color or smaller font size instead.
+
+DONT USE GRAY TEXT ON COLORED BACKGROUNDS;
+
+making a lighter gray is great way to de-emphasize on white backgrounds.but it does not great on colored backgrounds.
+
+making the text closer to the background color is what acutally helps create hierarchy not making it light grey.
+
+dont use white color and reduce the contrast.
+
+a better aproach is hand-pick a new color based on background color with a same hue
+
+PRIMARY COLOR;
+
+red 
+blue 
+yellow
+
+SECONDARY COLOR;
+
+orange
+violet
+green.
+
+TERITARY COLOR;
+
+yellow orange
+red orange.
+
+secondary color - primary color + primary color.
+teritary color - primary color + secondary color.
+
+black,white,gray - neutral colors.
+
+Hue means primary color and secondary colors are pure meaning that black or white have not mixed with them.
+
+HSL - HUE SATURATION LIGHTNESS(LUMINOSITY)
+
+HUE - color
+SATURATION - intensity of color (combined effect of grey color) lower saturation leads to grey color. 
+LIGHTNESS - the brightness upon the color (higher luminosity leads to  white color and lower luminosity leads to black color).
+
+
+COLORS IN CSS;
+
+RGB - Red Green Blue
+RGBA - Red Green Blue Alpha (alpha is used to reduce and increase the thickness of the color)
+HSL - Hue Saturation Luminosity
+HSLA -  Hue saturation Luminosity Alpha
+HEX - #followed by alpha numeric values
+
+ 

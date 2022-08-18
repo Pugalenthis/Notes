@@ -1,0 +1,9 @@
+ENV IN DOCKER;
+
+https://towardsdatascience.com/a-complete-guide-to-using-environment-variables-and-files-with-docker-and-compose-4549c21dc6af
+
+--env-file /env/filepath to mention env file in dockerfile.
+
+docker run --env-file /path/to/env/ image-name.
+
+

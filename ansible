@@ -1,0 +1,36 @@
+YAML FILE SYNTAX;
+
+executed in sequential order.
+Indentation is extremely important
+No tabs in yaml file
+only use spaces
+.yml or .yaml extension
+no difference in double quotes or no quotes for task name.
+ansible root file /etc/ansible
+No need to modify file permission.
+
+YAML FILE SYNTAX EXAMPLE;
+
+YAML FILE SHOULD STARTS WITH
+
+---
+  - name: playbookname
+    hosts: localhost
+    become: yes
+    become_user: root
+    empty line
+    tasks:
+    - name: Name of the task.
+      modulename(yum): 
+      name: httpd
+     
+
+COMMANDS;
+
+ansible-playbook -i hosts playbook-name
+ansible -i hosts all  -m ping
+ansible ubuntu@65.0.72.127 --private-key ~/.ssh/my-ansible.pem -m ping
+ansible all -m ping - if all set in ansible.cfg
+ansible-playbook playbooks/first.yaml --check
+ansible-playbook playbooks/first.yaml --syntax-check
+ 

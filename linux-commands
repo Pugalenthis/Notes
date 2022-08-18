@@ -1,0 +1,307 @@
+linux is the operating system that sits between the users and the hardware.
+unix was developed for multitasks in mid 1970
+linux born in 1991
+
+The user programs interact with the kernel which lives in the os and then kernel interacts with the hardware and provide the services to the users.
+
+linux is case sensitive
+
+Everything is a linux including physical devices like cd dvd and rom.
+
+linux uses a hierarchy file system much like upside down tree with (/) as base all other directories are spreading from there.
+
+Filesystem is a  method used by an opearting system to keep track of files on disk or partition.
+
+/- root directory on sudo users can access.
+/bin - commands used by all users and contain binary executables(compiled source code and also called  as eexecutables bcoz they executed  by the  computer)
+/sbin - similar to /bin but it contain the binary files that located under this directory are used typically by system adimistrators/etc - contain configuration files required by all programs .this also contain the shutdown shell scripts and to start/stop indiviudla programs.
+/dev - contain device files these include usb or any device attached to the system.
+/proc - contain information about system process.contains about running process. ex. pid with the particular process
+/var - variable files.It includes system log files(var/log) pacakges and database (/var/lib) lock files (var/lock) temp files(/var/tmp)
+/tmp - temporary files created by system and users.files under directory are deleted when systems are rebooted.
+
+1. / – Root
+2. /bin – User Binaries
+3. /sbin – System Binaries
+4. /etc – Configuration Files
+5. /dev – Device Files
+6. /proc – Process Information
+7. /var – Variable Files
+8. /tmp – Temporary Files
+9. /usr – User Programs
+10. /home – Home Directories
+11. /boot – Boot Loader Files
+12. /lib – System Libraries
+13. /opt – Optional add-on Applications
+14. /mnt – Mount Directory
+15. /media – Removable Media Devices
+16. /srv – Service Data
+
+Change Any Users Password
+Login as the root user and type the command:
+# passwd userName
+
+
+Change Your Own Password
+Simply type the passwd command:
+$ passwd
+
+# find / -name data.txt
+# locate data.txt
+# updatedb
+
+$ ln blah1 blah1-hard
+$ ln -s blah2 blah2-soft
+
+ls *.html *.txt - anything
+? - for one character
+file *[xyz]* - either anyone of character.
+^ - caret starting
+$ - ending 
+\ - is used to escape character ie. special character.
+
+ls -d */ - prints all folder in current working directory.
+ls -dr */ - prints all folder in reverse order
+ls -dltr */ - prints all working directory in reverse order
+ ls -dr .*/ - prints all hidden folders in current working directory.
+
+ls -l
+ls -al
+ls -ltr
+
+chmod ugo+r filename
+chmod 444 filename
+
+A command is a program that tells the Linux system to do something. It has the form:
+command [options] [arguments]
+
+chown user:group file
+chgrp grp file
+
+-R - for recursive option
+
+echo "text" > filename
+echo "text" >> filename
+
+pipes - used to pipe the output of one command to input for another command.
+
+command1 arguments | command2 arguments.
+
+cp org-file cp-file
+
+rm -rf foldername - delete all files recursively and also directory itself.
+
+mv originaldir/file movingorg/copyy_dir
+
+
+ACL;
+
+permission sits above the file permissions.
+specific permission to specific user can be given by acl.
+
+setfacl and getfacl.
+
+1) To add permission for a user
+setfacl -m "u:user:permissions" /path/to/file
+
+2) To add permissions for a group
+setfacl -m "g:group:permissions" /path/to/file
+
+3) To allow all files or directories to inherit ACL entries from the directory it is within
+setfacl -Rm "entry" /path/to/dir
+
+4) To remove a specific entry
+setfacl -x "entry" /path/to/file
+
+5) To remove all entries
+setfacl -b path/to/file
+
+Tee;
+
+used to print outisde and also will write to the file at same time
+
+echo "text to be written" | tee filename
+
+To append 
+
+echo "text" | tee -a filename
+
+
+WORD COUNT;
+
+wc filename 
+
+gives lines words and characters
+
+wc -l - to get lines
+wc -m - to get character 
+wc -w - to get word count.
+
+FILE DISPLAY COMMANDS;
+
+cat 
+more 
+less 
+head 
+tail
+
+cat -n filename - to read with line number
+more filname - hit space will show one page at a time
+less filename - hit space will show onepage at time hit j to one line forward hit k to oneline backward at a time.
+head -2 filename - to show first 2 lines
+tail -2 filanem - to show last two lines
+
+FILTER/TEXT PROCESSING COMMANDS;
+
+cut
+awk
+grep and egrep
+sort
+uniq
+wc -word count command
+
+CUT;
+
+cut parts of line from file or result
+option is mandatory
+
+cut -c1 error.log - first character
+cut -c1,3,5 error.log - first third and fifth character
+
+cut -c1-5 error.log - 1 to 5 th character
+
+cut -c1-3,4-5 error.log - 1 to 3 and 4 to 5 character
+
+DELIMITERS;
+
+A delimiter is one or more characters that separate text strings. Common delimiters are commas (,), semicolon (;), quotes ( ", ' ), braces .
+
+cut -d: -f 1 /etc/passwd  - use : as delimiter and returns the first field
+
+AWK;
+
+used to extract fields from file column 
+
+awk '{print $1}' pugal.txt - to print first column
+
+ls -l | awk '{print $1,$3}' 
+
+ls -l | awk '{print $NF}' - for printing last column
+
+awk to search for text in file;
+
+awk '/pugal/ {print}' pugal.txt - search for specific string in file
+
+To get according to the delimiter;
+
+awk -F: '{print $1}' /etc/passwd - to print first column in file by delimiter.
+
+GREP/EGREP;
+
+grep - global regular expression print
+
+grep "pug" pugal.txt 
+grep -c  "pug" pugal.txt - prints the count
+grep -i "Pug" pugal.txt -ignores the case sensitive and search for keyword.
+grep -in "Pug" pugal.txt - printw with line number
+grep -vi "pugal" pugal.txt - excludes matches
+
+egrep - to search two words in a file
+
+egrep -i "aravind|pugal" pugal.txt  - prints even either one matchs
+
+SORT/UNIQ ;
+
+sort command sorts in alphabetical order
+uniq command filters out the duplicated lines.
+
+sort pugal.txt
+
+sort -r filename
+
+sort -k2 - sorting depending on the second column
+
+uniq pugal.txt
+
+always sort before uniq command use.
+
+uniq -c - want to know how many times duplicated
+sort pugal.txt | uniq -c
+
+sort pugal.txt | uniq -d - shows only duplicated line
+
+WORD COUNT COMMAND WC;
+
+wc filename - always subtracts-1 while finding the line count bcoz it counts the total line also.
+wc -l -gives line couunt
+wc -m - gives character count 
+wc -w - gives words count
+ls -l | wc -l
+
+
+TO COMPARE TWO FILES;
+ 
+DIFF AND CMP;
+
+DIFF - compares line by line
+CMP - compares by bytes.
+
+diff filename1 filename2
+cmp filename1 filename2
+
+TAR  GZIP AND GUNZIP;
+
+tar - takes bunch of files and put into one file or container.does not compress as much as gzip.gzip compress the file.
+gzip -d or gunzip
+
+Archive files are used to collect multiple data files together into a single file for easier portability and storage, or simply to compress files to use less storage space.
+
+tar cvf nameoftarfile directory to tar
+
+tar xvf ejs.tar
+gzip tarfile - it compress tar file
+gunzip - uncompress gz file
+
+JOINING AND SPLITTING FILES;
+cat file1 file2 > result
+
+split -l 2 error.log childfile - splits and put 2 line in each file.
+
+TRUNCATE;
+
+truncate -s 10 filename - truncates the file to 10 bytes.
+
+MODULE 5;
+
+text editor is a program which enables you to create and manipulate data in a linux file.
+
+SED COMMAND;
+
+Replace a string in a file with a new string.
+Find and delete a line.
+remove empty lines remove 
+remove first or n lines.
+
+sed   "s/jaya/pugal/g" demo - shows changes only in output
+sed -i  "s/jaya/pugal/g" demo - replaces the text
+sed -i  "s/jaya//g" demo - replaces space
+
+sed -i  "/^$/d" demo - deleting empty lines ^ means starting $ means end .
+sed -i "s/\t/ /g" demo - replaces tab with space
+
+
+USER ACCOUNT MANAGEMENT IN LINUX;
+
+User Files
+/etc/passwd = This file has all user’s attributes
+/etc/shadow = This file contains encrypted user password and password policy
+/etc/group = All group and user group information
+
+useradd username
+userdel username
+groupadd groupname
+groupdel groupname
+usermod -G groupname username - to add user to another group
+sudo useradd -G superheroes -s /bin/bash -c "This is description" -m -d /home/ironman ironman
+
+ 
