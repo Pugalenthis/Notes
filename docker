@@ -6,4 +6,30 @@ https://towardsdatascience.com/a-complete-guide-to-using-environment-variables-a
 
 docker run --env-file /path/to/env/ image-name.
 
+docker commit -m "message" container-name imagename:tag
+
+docker diff container_name  - to see differences.
+
+docker container will be available only if one process run in foreground.
+
+docker history imagename - to show the history of the image.
+
+COPY is a docker file command that copies files from a local source location to a destination in the Docker container. ADD command is used to copy files/directories into a Docker image.
+
+entrypoint is used to define default process that runs when starting container
+
+cmd is default command that can run while running container.
+
+cmd is the default arguments to the entrypoint.
+
+docker run --rm -it shippingdocker/php:0.1.0 php -v - to start and run command in docker image.
+
+docker build -t shippingdocker/nginx:0.1.0 -t shippingdocker/nginx:latest . - can give multiple tag names while building images.
+
+docker build -f ./Dockerfile -t shippingdocker/nginx:latest ./build
+
+-f - to specify the dockerfile path and if dockerrfile name is different.
+
+build context - file path of code.
+
 

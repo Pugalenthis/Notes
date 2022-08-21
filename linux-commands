@@ -301,7 +301,84 @@ useradd username
 userdel username
 groupadd groupname
 groupdel groupname
-usermod -G groupname username - to add user to another group
+usermod -aG groupname username - to add user to another group
+gpasswd -d username gname - to remove specific user from the group
 sudo useradd -G superheroes -s /bin/bash -c "This is description" -m -d /home/ironman ironman
 
- 
+SWITCH USERS AND SUDO ACCESS;
+
+su - username =  to change from one user to another user.
+sudo command = to run command as root user
+visudo - to edit /etc/sudoers file ( add to sudo group to run any command with sudo prefix)
+sudo su username  - to change only user not home directory.
+
+MONITOR USERS;
+
+who - describes as which user logged in.
+last - gives the history of login users
+finger  - Finger command is a user information lookup command which gives details of all the users logged in.
+w - more details of who command.
+id - gives the id of the users.
+
+SYSTEM UTILITY COMMANDS;
+
+date - to find date
+uptime - shows how long the system is running
+hostname - shows hostname
+uname - which types of machine for ex linux
+which - location of command you run
+cal - gives calendar
+cal 8 2022 - gives particular month calendar
+cal year - to give all month
+bc - binary calculator 
+
+PROCESSES JOBS AND SCHEDULING;
+
+APPLICATION = SERVICE - program that runs on our computer.
+SCRIPT - commands are list of instructions.
+PROCESS - process is associated with the application.It is isloated.
+DAEMON - It is also a process that listens in the background for the incoming requests.
+THREADS - thread is a segment of process which means aprocess can have multiple threads and these multiple threads are contained within the process.It is not isolated.
+JOB - run a service or process at a schedule time is called a job.
+
+PROCESS OR SERVICE COMMANDS;
+
+systemctl
+ps
+top
+kill
+crontab
+at
+
+SYSTEMCTL - new tool to control services
+
+systemctl start|stop|status servicename.service
+systemctl enable servicename.service - to start while system boots you can use enable command.
+systemctl disable servicename.service
+systemctl reload|restart servicename.service  - to apply config changes
+systemctl list-units --all
+
+To add service under systemctl management.
+
+create a unit file in /etc/systemd/system/servicename.service 
+
+To control your system with sysemctl;
+
+systemctl poweroff
+systemctl reboot.
+
+PS COMMAND;
+
+ps - process status 
+
+display all currently running process in the linux.
+
+ps - shows the process of the current shell.
+ps -e - shows all running process.
+ps -ef - show all runniing process in the full format list.
+ps -u username - shows the process started by username
+ps -ef | grep firewalld
+
+TOP COMMAND;
+
+

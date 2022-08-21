@@ -1,0 +1,50 @@
+AWS can be accessed in three ways;
+
+aws cli
+sdk 
+console
+
+AWS USERS ROLES AND GROUPS;
+
+users - one user
+group - two or more users.
+Roles - Access Management (IAM) roles provide a way to access AWS by relying on temporary security credentials.
+
+IAM POLICY;
+
+A document that provides set of permissions.
+
+ARN - amazon resource names that uniquely identify aws resources.
+
+LAMBDA - serverless compute.
+
+lamba can be triggered by 3 ways;
+
+1) by other aws services.
+2) changes made to s3 or dynamodb.
+3) triggered by user request.
+
+S3 GLACIER - it's like a trash  deleted data are stored in glacier.
+
+MICROSERVICES;
+
+MONOLITHIC;
+
+1) one big thing.
+2) difficult to change
+3) we cant make it any bigger
+4) one small mistake affects whole thing.
+
+MICROSERVICE;
+
+microservice is a small loosely coupled distribured service.set of loosely coupled microservices that operate together to solve a common problem.
+
+A collection of microservices are called as system.
+
+The API Gateway offers a reverse proxy to redirect or route requests (layer 7 routing, usually HTTP requests) to the endpoints of the internal microservices
+
+1 microservice - 1 api - 1 lambda
+
+Regression testing - testing method for node js.
+
+
