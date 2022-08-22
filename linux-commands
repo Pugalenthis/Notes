@@ -251,6 +251,13 @@ cmp filename1 filename2
 
 TAR  GZIP AND GUNZIP;
 
+ZIP COMMNAD TO ZIP RECURSIVE DIRECTORIES;
+
+zip -r zipfilename foldername
+local to remote send files - scp -i .ssh/my-ansible.pem  my-react-app.zip ubuntu@3.108.190.157:/home/ubuntu
+remote to local -scp -i .ssh/my-ansible.pem ubuntu@3.108.190.157:/home/ubuntu/my-react-app.zip ./
+
+
 tar - takes bunch of files and put into one file or container.does not compress as much as gzip.gzip compress the file.
 gzip -d or gunzip
 

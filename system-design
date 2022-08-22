@@ -7,4 +7,89 @@ SINGLE RESPONSIBILITY PRINCIPLE;
 
 high cohesion is called  single responsibility principle.
 
+CODE SMELLS - wrong things in code (refactoring.guru)
+
+DIVERGENT CHANGE - if class has multiple responsiblites then  if any minor changes the whole class things should be tested.
+
+If the class has less cohesive it is wrong then  it will have divergent change code smell. so the class should be decomposed.
+
+The class should follow the single responsibility principle.
+
+CODESMELL;
+
+Shotgun surgery and Divergent change.
+
+EVERY CLASS SHOULD BE HIGH COHESIVE.
+
+SHOT GUN SURGERY;
+
+If the frequent changes are making in the splitted classes means unnecessary splitting called shotgun surgery. so at that time joining of class is better solution.
+
+SCALING TECHNIQUES;
+
+Adding or deleting resources is called scaling.
+
+VERTICAL SCALING;
+
+scaling specification  in one machine.
+it has some limit.
+
+scale up (vertical scaling) - adding specifications in one machine.
+scale out (horizontal scaling) - parallely adding machines.
+
+3 DIMENSIONS TO SCALING;
+
+x axis scaling - horizontal duplication (scale by cloning) needs load balancer.all requests come to load balancer ip and it shares load to all machines.
+z axis scaling - all request come to router. router sends  request to correspond server depend  of the logic.
+y - functional decomposition. splitting into different micro services.
+
+
+WEB COMPONENT - BASICS;
+
+FIREWALL  - Intercepts the traffic in ant out and decides to allow if the existing rules satisfied.
+
+proxy is used to hide the client  or server.
+
+Forward proxy - for client.
+Reverse proxy - for server.
+
+two types of firewall;
+
+hardware firewall 
+software firewall
+
+Router - decide and redirect. Decide depends on the route logic.
+
+
+Firewall  - Intercept and filter.
+Forward proxy - client anonymity.
+Reverse proxy - server anonymity
+App Router - Decide and Redirect
+Load Balancer - Fair Distribution on Server side.
+
+MONOLITH ARCHITECTURE;
+
+monolith - one big rock 
+
+function class application module anything has a multiple responsibilites are called monolith.
+
+SCALING A MONOLITH;
+
+x and z scaling only possible.
+
+MONOLITH PROS AND CONS;
+
+Latency - Increased efficiency, reduced overhead of transmissions, sharing of caches etc.
+Maintenance - one build artifact.
+simple to scale.
+
+CONS;
+
+performance Issues - Increased application load time.
+code maintainibility issues - not easy to understand and modify for developers.
+continous deployment is challenge.
+
+
+
+
 

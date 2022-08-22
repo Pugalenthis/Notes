@@ -1,0 +1,7 @@
+A RECORD  - A record is used to translate domain name into ip address.
+CNAME - used to forward one domain name to another domain name.
+
+sudo apt-get install certbot  python3-certbot-nginx
+
+certbot --nginx -d vayalindia.in
+
