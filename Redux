@@ -1,0 +1,26 @@
+Redux is a pattern and library for managing and updating application state, using events called "actions".
+
+Why Should I Use Redux?
+Redux helps you manage "global" state - state that is needed across many parts of your application.
+
+Redux is more useful when:
+
+You have large amounts of application state that are needed in many places in the app
+The app state is updated frequently over time
+The logic to update that state may be complex
+The app has a medium or large-sized codebase, and might be worked on by many people
+
+Redux Basics
+
+The Redux Store
+The center of every Redux application is the store. A "store" is a container that holds your application's global state.
+
+A store is a JavaScript object with a few special functions and abilities that make it different than a plain global object:
+
+State, Actions, and Reducers
+
+We start by defining an initial state value to describe the application.Redux apps normally have a JS object as the root piece of the state, with other values inside that object.
+
+Then, we define a reducer function. The reducer receives two arguments, the current state and an action object describing what happened. When the Redux app starts up, we don't have any state yet, so we provide the initialState as the default value for this reducer.
+
+The useDispatch hook is used to dispatch an action while useSelector hook is used to get the state from the redux store 

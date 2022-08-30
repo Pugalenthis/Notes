@@ -32,4 +32,8 @@ docker build -f ./Dockerfile -t shippingdocker/nginx:latest ./build
 
 build context - file path of code.
 
+daemonize = no - means set server to not to run on background
+
+docker inspect myphp | jq ".[0].NetworkSettings.IPAddress" - to print ip of docker container using jq tool.
+
 
