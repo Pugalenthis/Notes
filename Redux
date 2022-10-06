@@ -24,3 +24,108 @@ We start by defining an initial state value to describe the application.Redux ap
 Then, we define a reducer function. The reducer receives two arguments, the current state and an action object describing what happened. When the Redux app starts up, we don't have any state yet, so we provide the initialState as the default value for this reducer.
 
 The useDispatch hook is used to dispatch an action while useSelector hook is used to get the state from the redux store 
+
+WHOLE PROCESS OF REDUX;
+
+The whole global state of your app is stored in an object tree inside a single store. The only way to change the state tree is to create an action, an object describing what happened, and dispatch it to the store. To specify how state gets updated in response to an action, you write pure reducer functions that calculate a new state based on the old state and the action.
+
+What is “slices” in Redux tool kit?
+
+ A function that accepts an initial state, an object of reducer functions, and a "slice name", and automatically generates action creators and action types that correspond to the reducers and state. 
+
+Mutable - changeable
+immutable - unchangeable.
+
+TERMINOLOGY;
+
+ACTIONS;
+
+An action is a plain JavaScript object that has a type field. You can think of an action as an event that describes something that happened in the application.
+
+type field - domainname/eventName
+
+const addTodoAction = {
+  type: 'todos/todoAdded',
+  payload: 'Buy milk'
+}
+
+Action creator;
+
+An action creator is a function that creates and returns an action object
+
+const addTodo = text => {
+  return {
+    type: 'todos/todoAdded',
+    payload: text
+  }
+}
+
+Reducers;
+
+const initialState = { value: 0 }
+
+function counterReducer(state = initialState, action) {
+  // Check to see if the reducer cares about this action
+  if (action.type === 'counter/increment') {
+    // If so, make a copy of `state`
+    return {
+      ...state,
+      // and update the copy with the new value
+      value: state.value + 1
+    }
+  }
+  // otherwise return the existing state unchanged
+  return state
+}
+
+Store
+
+The current Redux application state lives in an object called the store .
+
+The store is created by passing in a reducer, and has a method called getState that returns the current state value:
+
+import { configureStore } from '@reduxjs/toolkit'
+
+const store = configureStore({ reducer: counterReducer })
+
+console.log(store.getState())
+// {value: 0}
+
+
+Dispatch
+
+The Redux store has a method called dispatch. The only way to update the state is to call store.dispatch() and pass in an action object. The store will run its reducer function and save the new state value inside, and we can call getState() to retrieve the updated value:
+
+store.dispatch({ type: 'counter/increment' })
+
+console.log(store.getState())
+// {value: 1}
+
+
+Action Creators;
+
+const increment = () => {
+  return {
+    type: 'counter/increment'
+  }
+}
+
+store.dispatch(increment())
+
+console.log(store.getState())
+// {value: 2}
+
+
+Selectors
+
+Selectors are functions that know how to extract specific pieces of information from a store state value.
+
+const selectCounterValue = state => state.value
+
+const currentValue = selectCounterValue(store.getState())
+console.log(currentValue)
+// 2
+
+
+
+

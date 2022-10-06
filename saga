@@ -1,0 +1,11 @@
+saga is a middleware that allows redux store to interact the resources outside the store asynchronously.
+
+It has a watcher that watches for the action and does asynchronous operation.
+
+generator function which do the watching job of action.
+
+watcher will watch for action dispached and initiate the worker once the asnychronous operation is fulfilled.
+
+The worker will handle the function and terminate.
+
+ 

@@ -1,0 +1,204 @@
+What is ds?
+
+Proper store , search easily and easy to modify.
+
+BIOG0 NOTATION ?
+
+Measuring efficiency of data structures.
+
+Reports for store search add and delete.
+
+Calculate number of operation for each process.
+
+solve problems for worst case.
+
+complexity 
+
+function -> o(4) - o of 4 is called bigo notations.
+
+cpu should perform 4 number of operations is called 0(4) in bigo notations.
+
+Time complexity - the number of operations in the specific time.
+
+constant time -  operations are constant whatever changes in the function.It  will be rare case bcoz operations mostly depends on data size.
+
+why not running time ?
+
+running time depends on hardware which depends on system.It will not be a proper measurement.
+
+COMMON BIGO NOTATIONS;
+
+O(n) -> O(logn) -> O(n) -> O(n logn) -> O(n^2) -> O(2^n) 
+
+Best ------------------------------> worst
+
+O(1) TIME COMPLEXITY;
+
+1 operation for 10,100,1000 and all datas.
+
+O(LOGN) 
+
+Initialy operations proportional to data.Then after sometime operations will be flat  will not increase respect to data.
+
+O(N)
+
+the operations will be directly proportional to data.
+
+O(N LOGN)
+
+The operations will be increase proportionally to data but not directly proportional  will be higher or lower.
+
+what  is exponential?
+
+exponential refers to a large number in smaller terms.
+
+O(n^2) and o(2^n)
+
+These  refer to a worst complexities. Bcoz it rapidly increases the operations depend on the data.
+
+OPERATIONS;
+
+store
+search
+add
+delete
+
+ARRAY DATA STRUCTURE;
+
+RAM MEMORY;
+
+ram  memory will be rows and columns.
+
+array will be stored continously in the ram row and column.
+arrays is strongly typed means numbers, boolean values,string,alphabets.
+
+int a[5] - type name and size in c++
+size cannot be changed in arrays.
+
+2D ARRAY;
+
+int a[2][3] = {{1,2,3},{4,5,6}}
+
+operations and thier complexity;
+
+store -> 0(1) - constant time complexity
+search -> 0(n) - linear time complexity
+add -> 0(n) - 
+delete -> 0(n)
+
+select ds with respect to which operation  is important for you.
+
+STACK - one upon one is called stack.
+
+LIFO - LAST IN FIRST OUT
+
+METHODS IN STACK;
+
+It has one arrow.
+
+push - stack.push("a") does not return it just add element  to stack
+pop - stack.pop()  it remove  last element from stack and return the removed element
+peek - it returns the last element without removing from the stack.
+contains - stack.contains("a") to check it contains or not. it returns true if contains else it will return false.
+
+BIGO NOTATIONS FOR STACK DATA STRUCTURE;
+
+store - 0(N)
+search - o(N)
+add - o(1)
+delete - o(1)
+
+USECASES;
+
+undo/redo
+Recursion
+Back button
+
+QUEUE;
+
+It has two arrows front and back. we can Insert only in back (using back arrow).
+
+
+FIFO - First In First Out
+
+METHODS IN QUEUES;
+
+ENQUEUE(PUSH) -  queue.enqueue("b")  add element to back. It does not return anything.
+DEQUEUE(POP) - queue.dequeue() remove element from front and returns the element deleted it.
+PEEK -  queue.peek() It returns the front element without removing it.
+CONTAINS - It checks for elements and returns boolean.
+
+store - o(N)
+search - o(N)
+add - o(1)
+Delete - o(1)
+
+usecases;
+
+cpu job scheduling
+printers
+
+LINKED LIST;
+
+Node1 ---> Node2 ---> Node3
+
+nodes are connnected called linked list.
+
+node has two things. they are data and pointer.
+To know the next node in list the pointer is used.the memory location of next node is stored in pointer.
+
+Head node - First node are called head node.
+If head node is only there means the head node pointer value is null.
+
+Tail node - last node in the list.
+
+LINKED LIST METHODS;
+
+TWO CATEGORIES;
+
+ADD and REMOVE.
+
+ADD CATEGORY;
+
+addding to head.
+adding to middle.
+adding to tail
+
+REMOVE CATEGORY;
+
+remove from head.
+remove from middle.
+remove from tail.
+
+change pointers to add or remove the elements from the list.
+
+Store - o(N)
+search - o(N)
+add - o(1) or (N)
+Delete - o(1) or (N)
+
+USES;
+
+Implement stack,queue.
+Music Player.
+
+DOUBLY-LINKED-LIST;
+
+why?
+
+not possible to go back in linked list.To solve that we can use doubly-linked-list.
+
+It has two pointer previous pointer and also next pointer whereas linked list has only pointer to point next node.
+
+store --> o(N)
+search --> o(N)
+Add --> o(1) or O(N)
+Delete --> o(1) or o(N)
+
+- Back and Forward
+- Undo / Redo
+
+
+ 
+
+	
