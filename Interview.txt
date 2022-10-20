@@ -1,0 +1,9 @@
+OCT-13-2022
+
+forEach  vs map function
+null vs undefined
+event delegation
+flat() method to flatten array
+setTIME OUT INside a loop
+call apply and bind in js 
+

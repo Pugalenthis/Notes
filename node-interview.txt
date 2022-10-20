@@ -1,0 +1,10 @@
+node js is single threaded but multi thread operations is done by using event loop in nodejs
+
+call stack - where operations run
+callback queue - where operations waits for stack to be empty
+event loop  - responsible for pushing waiting callbacks to call stack
+web apis - where background operations run
+
+
+
+
